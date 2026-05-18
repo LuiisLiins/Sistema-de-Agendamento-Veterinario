@@ -14,14 +14,14 @@ namespace Agendamento_Veterinario___Back.Domain.Entities
 
         public DateTime? DataHoraFim { get; set; }
 
-        public string TipoServico { get; set; }
+        public string TipoServico { get; set; } = null!;
 
-        public string Descricao { get; set; }
+        public string Descricao { get; set; } = null!;
 
         public decimal Valor { get; set; }
 
 
-        public string Observacoes { get; set; }
+        public string Observacoes { get; set; } = null!;
 
         public DateTime DataCriacao { get; set; } = DateTime.UtcNow;
 
@@ -30,12 +30,12 @@ namespace Agendamento_Veterinario___Back.Domain.Entities
         public bool Ativo { get; set; } = true;
 
         
-        public virtual Clientes Cliente { get; set; }
+        public virtual Clientes Cliente { get; set; } = null!;
 
-        public virtual Pet  Pet { get; set; }
+        public virtual Pet Pet { get; set; } = null!;
 
-        public virtual Veterinario Veterinario { get; set; }
-        public object StatusAgendamento { get; private set; }
+        public virtual Veterinario Veterinario { get; set; } = null!;
+        public object StatusAgendamento { get; private set; } = null!;
 
      
 

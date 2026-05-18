@@ -3,6 +3,7 @@ import { MainLayout } from '../components/layout/MainLayout';
 import NewBooking from '../pages/NewBooking';
 import MyBookings from '../pages/MyBookings';
 import MyPets from '../pages/MyPets';
+import Veterinarians from '../pages/Veterinarians';
 
 export const AppRoutes = () => (
   <BrowserRouter>
@@ -15,7 +16,7 @@ export const AppRoutes = () => (
         {/* Adicione rotas vazias para não quebrar ao clicar nos outros links da sidebar */}
         <Route path="/meus-agendamentos" element={<MyBookings />} />
         <Route path="/pets" element={<MyPets />} />
-        <Route path="/veterinarios" element={<div className="p-8">Tela de Veterinários</div>} />
+        <Route path="/veterinarios" element={<Veterinarians />} />
         <Route path="/notificacoes" element={<div className="p-8">Tela de Notificações</div>} />
       </Route>
     </Routes>

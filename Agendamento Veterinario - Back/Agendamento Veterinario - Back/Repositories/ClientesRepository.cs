@@ -56,7 +56,7 @@ namespace Agendamento_Veterinario___Back.Repositories
             existing.DataAtualizacao = DateTime.UtcNow;
             existing.Ativo = cliente.Ativo;
 
-            return Task.FromResult(existing);
+            return Task.FromResult<Clientes?>(existing);
         }
     }
 }

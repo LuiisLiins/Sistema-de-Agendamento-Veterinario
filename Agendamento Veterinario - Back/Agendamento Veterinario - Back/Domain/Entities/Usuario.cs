@@ -4,11 +4,11 @@ namespace Agendamento_Veterinario___Back.Domain.Entities
     {
         public Guid Id { get; set; }
 
-        public string Nome { get; set; }
+        public string Nome { get; set; } = null!;
 
-        public string Email { get; set; }
+        public string Email { get; set; } = null!;
 
-        public string SenhaHash { get; set; }
+        public string SenhaHash { get; set; } = null!;
 
 
         public bool Ativo { get; set; }

@@ -114,7 +114,7 @@ namespace Agendamento_Veterinario___Back.Repositories
 
             var index = list.IndexOf(existing!);
             list[index] = entity!;
-            return Task.FromResult(entity);
+            return Task.FromResult<TEntity?>(entity);
         }
     }
 }

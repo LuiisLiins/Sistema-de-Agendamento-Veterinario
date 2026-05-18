@@ -7,21 +7,21 @@ namespace Agendamento_Veterinario___Back.Domain.Entities
 
             public int ClienteId { get; set; }
 
-            public string Nome { get; set; }
+            public string Nome { get; set; } = null!;
 
-            public string Especie { get; set; }
+            public string Especie { get; set; } = null!;
 
-            public string Raca { get; set; }
+            public string Raca { get; set; } = null!;
 
             public decimal Peso { get; set; }
 
             public DateTime DataNascimento { get; set; }
 
-            public string Cor { get; set; }
+            public string Cor { get; set; } = null!;
 
-            public string Sexo { get; set; }
+            public string Sexo { get; set; } = null!;
 
-            public string NumeroMicrochip { get; set; }
+            public string NumeroMicrochip { get; set; } = null!;
 
             public DateTime DataCriacao { get; set; } = DateTime.UtcNow;
 
@@ -30,7 +30,7 @@ namespace Agendamento_Veterinario___Back.Domain.Entities
             public bool Ativo { get; set; } = true;
 
             
-            public virtual Clientes Cliente { get; set; }
+            public virtual Clientes Cliente { get; set; } = null!;
 
             public virtual ICollection<Agendamento> Agendamentos { get; set; } = new List<Agendamento>();
 

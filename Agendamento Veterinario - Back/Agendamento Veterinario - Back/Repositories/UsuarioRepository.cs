@@ -53,7 +53,7 @@ namespace Agendamento_Veterinario___Back.Repositories
             existing.SenhaHash = usuario.SenhaHash;
             existing.Ativo = usuario.Ativo;
 
-            return Task.FromResult(existing);
+            return Task.FromResult<Usuario?>(existing);
         }
     }
 }

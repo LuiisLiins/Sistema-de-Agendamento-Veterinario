@@ -45,7 +45,14 @@ namespace Agendamento_Veterinario___Back.Repositories
                 else if (typeof(TKey) == typeof(Guid))
                 {
                     var guid = Guid.NewGuid();
-                    idProp.SetValue(entity, Convert.ChangeType(guid, idProp.PropertyType));
+                    if (idProp.PropertyType == typeof(Guid) || idProp.PropertyType == typeof(Guid?))
+                    {
+                        idProp.SetValue(entity, guid);
+                    }
+                    else
+                    {
+                        idProp.SetValue(entity, Convert.ChangeType(guid.ToString(), idProp.PropertyType));
+                    }
                 }
             }
 
